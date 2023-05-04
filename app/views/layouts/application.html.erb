@@ -9,8 +9,73 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
   <body>
-    <%= yield %>
+  <nav class="navbar bg-body-tertiary ">
+    <div class="container-fluid">
+      
+      <img src="https://www.graphicsprings.com/filestorage/stencils/1d3c1e1d87e6021fe5e5ffb325fc53d3.svg" class="img-thumbnail" alt="Funny looking lobster on an tropic island with palm trees, AI generated i think">
+      <div class="navbar-brand border border-dark rounded " > <%= link_to "Project Tracking", pages_home_path, {:style=>'color:#000000; text-decoration:none; margin-left: 5px; margin-right: 5px;', :class => "css_class"} %> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">Activity</a> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">Groups</a> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">To Do List</a> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">Calender</a> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">Meetings</a> </div>
+      <div class="border border-dark rounded"> <a class="navbar-brand ms-2">Messages</a> </div>
+      <div class="navbar-brand border border-dark rounded"> <%= link_to "Contact", pages_contact_path, {:style=>'color:#000000; text-decoration:none; margin-left: 5px; margin-right: 5px;', :class => "css_class"} %> </div>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-dark" type="submit">Sign In</button>
+        <button class="btn btn-outline-dark ms-2" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </nav>
+  
+    <!-- Inspiration: https://olympics.com/es/ (I thought we were remaking the website, some text is copied over) -->
+    <div><hr>
+      <%= yield %>
+    </div><hr>
+    
+    <div class="bg-dark text-light">
+      <div class="container"><hr> <!-- footer -->
+        <div class="row">
+          <div class="col"> <img src="https://dummyimage.com/200x200/000/fff" class="img-thumbnail" alt="example"> </div>
+          
+          <div class="col">
+            <h3>Email Application</h3>
+              <p>Send Emails</p>
+              <p>Create Email Address</p>
+              <p>Change Email</p>
+              <p>Email Recovery</p>
+          </div>
+          <div class="col">
+            <h3>Groups</h3>
+              <p>Join New Group</p>
+              <p>Edit/Leave Group</p>
+              <p>Create New Group</p>
+          </div>
+          <div class="col">
+            <h3>Calender</h3>
+              <p>Add Calender Entires</p>
+              <p>View Calender Entires</p>
+          </div>
+          <div class="col">
+            <h3> Meetings</h3>
+              <p>Join Meeting </p>
+          </div>
+          
+        </div><hr>
+        <div class="row mt-4">
+          <div class="col"> <p> Activities </p> </div>
+          <div class="col"> <p> Groups </p> </div>
+          <div class="col"> <p> To Do List </p> </div>
+          <div class="col"> <p> Calender </p> </div>
+          <div class="col"> <p> Meetings </p> </div>
+          <div class="col"> <p> Messages </p> </div>
+        </div>
+      <div>
+      <div class="row">
+        <div class="col text-center"> <h5>TM © 2O28 – Sean Derenas and BayPath Programming and Web Development – All Rights Reserved.</h5> </div>
+      </div>
+    </div>
+
   </body>
 </html>
